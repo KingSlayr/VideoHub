@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+    background: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+h1{
+    text-align: center;
+}
+.createRoomButton{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1e20;
+    border-radius: 10px;
+    font-size: medium;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.createRoomButton:hover{
+    background-color: #343434;
+}
+
+.createRoomButton i{
+    color: blue;
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+.instruction{
+    padding: 20px;
+    background-color: #1c1e20;
+    width: 50vw;
+    border-radius: 10px;
+}
+
+.url_to_copy{
+    background-color: #1c1e20;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: medium;
+}
+
+.URL{
+    cursor: pointer;
+}

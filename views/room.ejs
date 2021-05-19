@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="videoHandler.css">
+    
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://kit.fontawesome.com/37dbd7b1a1.js" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        const ROOM_ID = "<%=roomId%>";
+    </script>
+    <title>FaceHub</title>
+</head>
+<body>
+    <div class="main">
+        <div class="main_left">
+            <div class="main_videos">
+                <div id="video-grid"></div>
+            </div>
+            <div class="main_controls">
+                <div class="main_controls_block">
+                    <div onclick="muteUnmute()" class="main_controls_button main_mute_button">
+                        <i class="fas fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+                    <div onclick="videoOnOff()" class="main_controls_button main_video_button">
+                        <i class="fas fa-video"></i>
+                        <span>Stop Video</span>
+                    </div>
+                </div>
+                <div class="main_controls_block">
+                    <div class="main_controls_button">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="main_controls_button">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Participants</span>
+                    </div>
+                    <div onclick="openCloseChat()" class="main_controls_button chat_button">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Chat</span>
+                    </div>
+                </div>
+                <div class="main_controls_block">
+                    <div onclick="exitRoom()" class="main_controls_button ">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="leave_meeting">Leave Meeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="main_header">
+                Chat
+            </div>
+            <div class="main_chat_window">
+                <ul class="messages"></ul>
+            </div>
+            <div class="main_message_container">
+                <input id="chat_message" type='text' placeholder="Type mesaage here..."/>
+            </div>
+        </div>
+    </div>
+
+    <script src="videoHandler.js"></script>
+    <script src='script.js'></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homeStyle.css">
+
+    <script>
+        const ROOM_ID = "<%=roomId%>";
+    </script>
+
+    <script src="https://kit.fontawesome.com/37dbd7b1a1.js" crossorigin="anonymous"></script> 
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to FaceHub!</h1>
+    <div onclick="enterRoom()" class="createRoomButton">
+        <i class="fas fa-video"></i>
+        <div>Click to Join Room</div>
+    </div>
+    <div class="url_to_copy">
+        Your Room URL (click to copy) - 
+        <span onclick="copyUrl()" class="URL"></span>
+    </div>
+    <div class="instruction">
+        <h2>Instructions - </h2>
+        <ul>
+            <li>Share the URL of the room to your friends to join</li>
+            <li>Click on the URL to copy</li>
+            <li>Click on the above button to join the new room</li>
+        </ul>
+    </div>
+    <script src="homeScript.js"></script>
+</body>
+</html>
