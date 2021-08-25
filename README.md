@@ -3,4 +3,5 @@ Video Chat Web app
 
 ## Demo
 
-<img src="VideoHub.JPG"/>
+<img src="VideoHub1.JPG"/>
+<img src="VideoHub2.JPG"/>
